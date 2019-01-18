@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+        <script type="text/javascript">
+            function myScreen()
+            {
+                var w = window.screen.width;
+                if (w <= 420)
+                {
+                    alert("you are using a normal screen");
+                }
+                else
+                {
+                    alert("you are using an abnormal screen");
+                }
+            }
+        </script>
+        <button onclick="myScreen()">What is my screen width</button>
+        <button onclick="alert(window.navigator.appCodeName)">Show my browser</button>
+        <button onclick="window.print()">Print Window</button>
+    
+</body>
+</html> 

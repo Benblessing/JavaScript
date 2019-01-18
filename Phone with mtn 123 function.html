@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>phone</title>
+</head>
+<style type="text/css">
+	button{width: 40px;height: 35px;}
+</style>
+<script type="text/javascript">
+	var mtn=false;
+	 var level1=false;
+	 var n1=false;
+	function but(u){
+		s.value+=u;
+	}
+	function cancel()
+	{
+		s.value="";
+	}
+	function call(){
+		if(s.value=="*123#"){
+			s.value="1.Account Information \n2.Tariff Plan Migration \n3.Data Services \n4.Roaming & Int'l Offers \n5.My Services \n6.ExtraTime \n7.More.. \nEnter 1,2,3...7 to proceed";
+			 mtn=true;
+		}
+		 	else if(mtn)
+			 {
+		  if(s.value == "1"){
+		  	if(!level1)
+		  	{
+			
+			s.value="my tools \n1.My Number\n2.My tariff plan\n3.My account balance\n4.My Data Balance\n5.End of call Message\n0.Back\n00.MainMenu";
+			n1="1";
+			level1=true;
+		}
+		else if(level1)
+		{
+			if(n1=="1"){
+				s.value="Y'ello!Your mobile number is +2348145420552";
+			}
+			else if(n1=="2"){
+				s.value="Enjoy 150% airtime bonus on every recharge below N100 & 250% airtime bonus on recharges from N100 & above on BetaTalk.\n1.MIgrate to BetaTalk\n0.Back\n00.MainMenu";
+			}
+			if(n1=="3")
+			{
+				s.value="Buy Data Plans\n1.Daily Plan\n2.Weekly Plan\n3.Monthly Plan\n4.2-Months Plan\n5.3-months Plan\n0.Back\n00.MainMenu";
+			}
+		}
+		}
+		else if(s.value =="2")
+		{
+			if(!level1)
+			{		
+			s.value="1.BetaTalk,\n2.Pulse\n3.Xtraspecial\n4.XtraValue\n0.Back\n00.MainMenu";
+			n1="2";
+			level1=true;
+			}
+			else if(level1)
+			{
+				if(n1=="2")
+				{
+					s.value="Enjoy youthful life on MTN Pulse\n1.Migrate to MTN Pulse\n2.1GB@N500(Pulse customer ONLY)\n3.Subscribe to Music+@10\n4.Night Browsing@N25\n5.GoodyBag Bundle";
+				}
+				if(n1=="1")
+				{
+					s.value="1.BetaTalk\n2.Pulse\n3.Xtraspecial\n4.XtraValue\n0.Back\n00.MainMenu";
+				}
+				if(n1=="3")
+				{
+					s.value="XtraValue Bundles\n1.XtraTalk\n2.XtraData\n3.Eligible International Destinations\n0.Back\n00.MainMenu";
+				}
+			}
+		}
+		else if(s.value =="3")
+		{
+			if(!level1)
+			{
+			s.value="1.buy Data plans\n2.Buy XtraValue Bundles\n3.Buy Goody Bags\n4.Check Balance\n5.Roaming & Int'l Offers\n6.XtraTime/Byte\n7.Data Gift\n8.Youtube";
+			n1="3";
+			level1=true;
+		}
+		else if(level1)
+		{
+			 if(n1=="2")
+			{
+				s.value="Make calls with No Access Fee at a flat rate of 15 kobo/sec to ALL networks in Nigeria & 18 Inti/lcountries.\n1.Migrate to MTNxtravalue";
+			}
+			if(n1=="1")
+			{
+				s.value="Pulse main balance:42.09;New!Get 75MB daily bundle for just N100.Dial *131*104# to buy";
+			}
+			if(n1=="3")
+			{
+				s.value="1.Whatsapp\n2.Facebook\n3.Twitter\n4.INSTAGRAM\n5.2GO\n6.WECHAT\n7.Eskimi\n8.NIMBUZZ\n9.PICK ANY 5\n0.Back\n00.MainMenu";
+			}	
+		}
+	}
+		else if(s.value =="4")
+		{
+			if(!level1)
+			{
+			s.value="1.HelloWorld Roaming offer\n2.SuperRoamer (Free incoming roaming)\n3.Int'l Calling Bundle\n4.Russia World Cup Bundle\n0.Back";
+			n1="4";
+			level1=true;
+		}
+			else if(level1)
+			{
+		if(n1=="2")
+		{
+			s.value="This plan gives you airtime for Natl & Inti/;l calls plus data after subscribing to a bundle plan.\n1.XtraTalk plans \n2.XtraData plans\n3.Eligible Int's Destinations\n0.Back\n00.Main";
+		}
+		if(n1=="1"){
+			s.value="Your Data Balance Summary:500.0 MB.Dial*559*78# for expiry date(s)OR*559*63# for bonus details.";
+		}
+		if(n1=="3")
+		{
+			s.value="Your Data Balance Summary:500.0 MB.Dial*559*78# for expiry date(s)OR*559*63# for bonus details.";
+		}
+
+	}
+}
+		else if(s.value =="5")
+		{
+			if(!level1)
+			{
+			s.value="Welcome to the MTN content Services Menu Reply with a number to manage your\n1.Active services \n2.New services\n3.Unconfirmed services";
+			n="5";
+			level1=true;
+		}
+		else if(level1)
+		{
+			if(n1=="1")
+			{
+				s.value="1.Activate EOCN\n2.Deactivate EOCN\n0.Back\n00.MainMenu";
+			}
+			if(n1=="3")
+			{
+				s.value="1.HelloWorld Roaming offer\n2.SuperRoamer (Free incoming roaming)\n3.Int'l Calling Bundle\n4.Russia World Cup Bundle\n0.Back";
+			}
+		}
+	}
+		else if(s.value =="6")
+		{ if(!level1)
+			{
+			s.value="Welcome to MTN XtraValue.\n1:Eligibility Status\n2:Request Airtime (XtraTime)\n3:Request Data (XtraByte)\n4:XtraCash\n5:XtraTime Balance\n9:Next";
+			n="6";
+			level1=true;
+		}
+		else if(level1)
+		{
+			if(n1=="3")
+			{
+				s.value="Welcome to MTN XtraTime.\n1:Eligibility Status\n2:Request Airtime(XtraTime)\n3:Request Data(XtraByte)\n4:XtraCash\n5:XtraTime Balance\n9:Next";
+			}
+			}
+		}
+		else if(s.value =="7")
+		{if(!level1)
+			{
+			s.value="1.Mobile Newspaper Services\n2.ShareAndSell\n3.Okada Books\n4.More...\n0.Back\n00.MainMenu";
+			n="7";
+			level1=true;
+			}
+			else if(level1)
+			{
+				if(n1=="3")
+				{
+					s.value="Welcome to MTN Data Gift.Select Data plan to gift\n1.Daily Plans\n2.Weekly plans\n3.Monthly plans\n4.2-Months plans\n5.3-Months plans";
+				}
+			}
+		}
+		}
+		else if(s.value.length==11)
+		{
+			setTimeout(s,2000);
+			s.value="Dialing..."+s.value;
+		}
+		else(s.value="invalid Number");
+	}
+
+	function clr(){
+		s.value="";
+	}
+</script>
+<body>
+	<div style="border-right:3px; margin-left: 500px; background-color: black; width: 144px; border-spacing: 30px; padding-left: 4px; padding-right: 4px; padding-bottom: 2px; padding-top: 5px;">
+	<table border="2" style="border-radius: 10px;">
+			<div style="background-color: black;"></div>
+		<tr>
+			<div style="background-color: black; width: 144px; padding-top: 15px; border-radius: 10px;">
+			<textarea id="s" readonly="text" style="width:138px;height: 180px;background-color:#E5E5E5; border-radius:  10px;"></textarea>
+		</div>
+		</tr>
+		<tr>
+			<td><button onclick="clr()">R</button></td>
+			<td rowspan="2">
+				<button style="border-radius: 20px; ">OK</button></td>
+			<td>
+				<button ></button>
+			</td>
+		</tr>
+	    <tr>
+			<td>
+				<button onclick="call()" style="background-color: green;">[</button>
+			</td>
+			<td>
+				<button onclick="cancel('')">_</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="but('1')">1 </button>
+			</td>
+			<td>
+				<button onclick="but('2')">2 abc</button>
+			</td>
+			<td>
+				<button onclick="but('3')">3 def</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="but('4')">4 jkl</button>
+			</td>
+			<td>
+				<button onclick="but('5')">5 jkl</button>
+			</td>
+			<td>
+				<button onclick="but('6')">6 mno</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="but('7')">7 pqrs</button>
+			</td>
+			<td>
+				<button onclick="but('8')">8 tuv</button>
+			</td>
+			<td>
+				<button onclick="but('9')">9 wxyz</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="but('*')">*</button>
+			</td>
+			<td>
+				<button onclick="but('0')">0</button>
+			</td>
+			<td>
+				<button onclick="but('#')">#</button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

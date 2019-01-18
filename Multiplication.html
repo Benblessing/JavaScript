@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>times</title>
+	<script type="text/javascript">
+		function generate()
+		{
+			var result;
+			var bb=(fval.value);
+			var ll=(sval.value);
+			var st=(stf.value);	
+			for(x=1;x<=bb;x++){
+				document.write(x+"Times <br>")
+				for(i=1;i<=ll;i++){
+				result=x*i;
+				document.write(st+"x"+i +"="+result+ "<br>");
+				}
+			}
+						
+		}
+	</script>
+</head>
+<body>
+	<fieldset><legend>GreatBen</legend>
+	<table>
+	<tr>
+		<td>Blocks: <input type="text" id="fval" name=""></td><br />
+	</tr>
+	<tr>
+		<td>Lines:   <input type="text" id="sval" name=""><br />
+	</tr>
+	<tr>
+		<td>Start From:   <input type="text" id="stf" name=""><br />
+	</tr>
+	<td align="center"><button onclick="generate()">Generate</button></td></td>
+	</tr>
+	</table>
+	</fieldset>
+</body>
+</html>

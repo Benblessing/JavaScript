@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Phone</title>
+	
+
+	<style>
+
+	table{ height: 50px;
+		width: 100px;
+		border-collapse: collapse;
+		background-color: white;
+		}
+
+	input{ height: 200px;
+		width: 150px;
+		}
+	
+	button{ height: 30px;
+		width: 100%;
+		color: white;
+		background-color: black;
+		font-family: arial;
+		font-size: 20px;
+		}
+
+	#v 	{
+		border-collapse: collapse;
+		}	
+
+	div{	width: 178px;
+			height: 200px;
+			margin: 0 0 4px 0;
+		}
+	
+	
+	#myDiv > h3{ text-align: center;
+		}
+
+	#Notification{
+			margin: 0 0 0 0;
+	}	
+
+	#MyTools{
+			margin: 0 0 0 0;
+	}	
+	
+
+	#a 	{	width: 100%;
+			height: 50px;
+		}
+
+
+	#table{
+			text-align: center; 
+			height: 40px; 
+			background-color: black; 
+			color: white;
+		}
+
+	</style>	
+	
+	<script>
+		// var vouchers = [];
+		var mtn = false;
+		var Balance = 0;
+		function button(b){
+			myDiv.innerHTML += b;
+		}
+
+
+		function send()
+		{
+			if (myDiv.innerHTML == "*123#")
+			{
+			myDiv.innerHTML="<h3 id=Notification> Notifications</h3> 1. Account Information.<br/>2.Tarrif plans migration.<br/> 3. Data Services. <br/> 4. Roaming & int'l offers.<br/> 5. My Services<br/> 6. ExtraTime. <br/>7. More.....<br/> Enter 123.......7 to proceed"; 
+				mtn = true;
+			}
+			if(mtn)
+			{
+				if (myDiv.innerHTML == "1")
+				{
+					myDiv.innerHTML ="<h3 id =MyTools>My Tools</h3>1. My Number<br/>2. My tarrif plan<br/> 3. My Account balance<br/> 4. My Data Balance<br/> 5. End of call Message<br/> 0. Back<br/> 00. MainMenu";
+				}
+				else if (myDiv.innerHTML== "2")
+				{ 
+					myDiv.innerHTML = "<h3 id = Notification> Notification</h3> 1. Beta Talk<br/> 2. Pulse<br/> 3. Xtra Special<br/> 4. Xtra Value<br/> 0. Back<br/> 00. MainMenu";
+				}
+
+
+				// else if (myDiv.innerHTML == "3") 
+				// {
+				// 	myDiv.innerHTML = "<h3 id = Notification> Notification</h3> please dial *556# for prepaid balance & *558# for postpaid balance." 
+				// }
+			}
+			else
+			{
+				myDiv.innerHTML = "Calling ....."+myDiv.innerHTML;
+			}
+
+		}
+
+
+
+
+
+		function clearscreen()
+
+		{
+			myDiv.innerHTML = "";
+		}
+
+		function generateRandom(){
+			var myDiv = Math. floor(Math.random() * 10000000000000000);
+			return myDiv.toString()
+		}
+
+
+		// function createVouchers(w){
+		// 	var pin = [];
+		// 	var status = [];			
+		// 	for (var i = 0; i < w; i++){
+		// 	pin.push(generateRandom());
+		// 	status.push(true);	
+		// 	}
+
+		// 	vouchers.push(pin, status);
+
+		// }
+		// createVouchers(10)
+		// console.log(vouchers);
+
+
+		// function showBalance()
+		// {
+		// 	myDiv.innerHTML = "The Balance is" + Balance; 
+		// }
+
+
+		// function dial()
+		// {
+		// 	var input = myDiv.innerHTML 
+		// 	if (input[0] === "*" && input [input.length -1] === "#") 
+		// 	{
+
+		// 		var rout = input.substr(1, 3);
+		// 		var pin = input.substr(5, 16);
+
+
+		// 		switch (rout){
+		// 			case "555":
+		// 			loadVoucher(pin);
+		// 			break;
+		// 		}
+
+		// 	}
+		// }
+
+
+		// function loadVoucher(pin)
+		// {
+		// 	if (vouchers [0].includes (pin)); 
+		// 	{
+
+		// 		var index = vouchers[0].indexOf(pin);
+
+
+		// 	if (vouchers [1][index] === true)
+			
+		// 	{
+
+		// 		Balance+=100
+		// 		myDiv.innerHTML = "Account recharge of N100 was successful." + Balance;
+		// 		vouchers[1] [index]= false;
+
+		// 	}
+
+		// 	else
+		// 	{
+
+		// 		myDiv.innerHTML = "This card has already been used"
+
+		// 	}
+
+
+		// 	}
+
+		// }
+
+	</script>
+
+
+</head>
+
+
+<body>
+	<table border="2" align="center" style="border-collapse: collapse;">
+		<tr>
+			<td colspan="3"><div id="myDiv" contenteditable></div>						
+			</td>
+
+		</tr>
+		<tr>
+			<td colspan="3" id="table"><img src="icons8_Apple_52px_1.png"></td>
+		<tr>	
+			<td><button id="a" onclick="dial()">....</button></td>
+			<td rowspan="2"><button style="min-height: 103px" id="v"><img src="icons8_Center_of_Gravity_50px.png"></button></td>
+			<td><button id="a" onclick="clearscreen()">....</button></td></tr>
+		</tr>
+		<tr>
+			<td><button id="a" onclick="send()"><img src="icons8_Call_48px.png"></button></td>
+			<td><button id="a"> <img src="icons8_End_Call_48px_1.png"> </button></td>
+			
+		</tr>
+
+		<tr>
+			<td><button  onclick="button('1')">1</button></td>
+			<td><button  onclick="button('2')">2</button></td>
+			<td><button  onclick="button('3')">3</button></td>
+		</tr>
+		<tr>
+			<td><button  onclick="button('4')">4</button></td>
+			<td><button  onclick="button('5')">5</button></td>
+			<td><button  onclick="button('6')">6</button></td>
+		</tr>
+		<tr>
+			<td><button  onclick="button('7')">7</button></td>
+			<td><button  onclick="button('8')">8</button></td>
+			<td><button  onclick="button('9')">9</button></td>
+		</tr>
+		<tr>
+			<td><button  onclick="button('*')">*</button></td>
+			<td><button  onclick="button('0')">0</button></td>
+			<td><button  onclick="button('#')">#</button></td>
+		</tr>
+
+	</table>
+	</body>
+</html>

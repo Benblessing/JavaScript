@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+			function plus(){
+				var vv = v.value;
+				var uu = u.value;
+				var a = parseFloat(v.value);
+				var b = parseFloat(u.value);
+				var plus = a + b;
+				r.value = plus;
+			}
+			function subtract(){
+				var vv = v.value;
+				var uu = u.value;
+				var subtract = vv - uu;
+				r.value = subtract;
+			}
+			function multiply(){
+				var vv = v.value;
+				var uu = u.value;
+				var multiply = vv * uu;
+				r.value = multiply;
+			}
+			function division(){
+				var vv = v.value;
+				var uu = u.value;
+				var division = vv / uu;
+				r.value = division;
+			}
+			
+	</script>
+
+</head>
+<body>
+	value &nbsp;<input type="text" id="v" name=""><br /><br/>
+	value &nbsp;<input type="text" id="u" name=""><br /><br/>
+	Result&nbsp;<input type="text" id="r" name=""><br /><br/>
+	<button onclick="plus()">+</button>
+	<button onclick="subtract()">-</button>
+	<button onclick="multiply()">*</button>	
+	<button onclick="division()">/</button>
+</body>
+</html>

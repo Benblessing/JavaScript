@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<script>
+
+		var sits = [""];
+
+		function allocateSeat()
+		{
+			sits[si.value] = stu.value;
+			alert(stu.value +" has been allocated to seat");
+		}
+
+		function search()
+		{
+			confirm(sits[fin.value] + " has been allocated to this seat did you intend to change the person on this sit?");
+			prompt("input the name here")
+			alert("name changed succesfully");
+			
+		}
+
+		  
+	</script>
+
+</head>
+<body>
+	Student Name: <input id="stu" type="text" /><br/><br/> Sit: <input id="si" type="text" /> <button onclick="allocateSeat()">Allocate Seat</button><br/></br>
+
+	<input type="text" id="fin"/><button onclick="search()">who is on this seat</button>
+
+</body>
+</html>

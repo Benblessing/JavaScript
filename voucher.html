@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VoucherGenerator</title>
+</head>
+<body onload="retrieve()">
+		<center id="container"><hr/>
+			<h2 style="color:#d13525;">THIS IS A VOUCHER GENERATING SYSTEM</h2>
+			<input type="text"  id="numb"/> &nbsp; <button onclick="gen()">Generate</button><br/><br/>
+			<input type="text" id="s"/> &nbsp; <button onclick="load()">Load</button>&nbsp;<button onclick="balance()">Balance</button>
+			<div id="show" style="width:400px; height:350px; background-color:#f2c057; margin-top:20px; padding-top:20px; color:#fff; font-size:1.2em; overflow:scroll;"></div>
+		</center>
+
+	<script>
+		var vouch = [], nvouch = [];
+		var f;
+		var k;
+		var m, n;
+		var vouchJ;
+		var l;
+		var b; 
+		var ba;
+
+		function gen(){
+
+			f = numb.value;
+			k = show.innerHTML;
+			vouch = [];
+
+			for(i=1; i<=f; i++){
+
+				var c = "";
+
+				for(j=1; j<=16; j++){
+					k = Math.floor(Math.random()*10);
+					c += k;
+					k = c.substring(0,4) + "-" + c.substring(4,8) + "-" + c.substring(8,12) + "-" + c.substring(12,16);
+					nok = c.substring(0,4) + c.substring(4,8) + c.substring(8,12) + c.substring(12,16);
+				}
+				m = [k,'New'];
+				//n = [nok,'New'];
+				vouch.push(m);
+				//nvouch.push(n);
+			} 
+
+			vouchJ = JSON.stringify(vouch);
+			document.getElementById('show').innerHTML = vouch.join("<br/>");
+			localStorage.setItem("savedVoucher",vouchJ);
+			 // for(y=0; y<vouch.length; y++){
+			 // 	show.innerHTML = vouch[y] + "<br/>";
+			 // }
+		}
+		function retrieve(){
+		 	vouch = JSON.parse(localStorage.getItem("savedVoucher"));
+		 	  for(y=0; y<vouch.length; y++){
+		 	  	show.innerHTML = vouch[y][0] + "<br/>";
+		 	  }
+		}
+
+		//var found = false;
+
+		function load(){
+
+		 	vouch = JSON.parse(localStorage.getItem("savedVoucher"));
+		 	for(y= 0; y<vouch.length;y++){
+
+		 		if(s.value == vouch[y][0]){
+		 			// found = true;
+		 			// if(nvouch[y][1] != "Used"){
+		 				vouch[y][1] = "Used";
+		 				//vouch[y][1] = "Used";
+		 				alert("Loaded..");
+		 					//if(localStorage.getItem("bal")!=null){
+		 					// 	ba += parseInt(localStorage.getItem("bal"));
+		 					// 	alert(ba);
+		 					// 	ba+=500;
+		 					// 	alert(ba);
+		 					// 	localStorage.setItem("bal",ba);
+		 					// }
+					ba = 500;
+					alert(ba);
+					
+					
+					localStorage.setItem("bal",ba);
+					ba +=parseInt(localStorage.getItem("bal"));
+					alert(ba);
+					localStorage.setItem("bal",ba);
+					}
+					// else{
+					// 	alert("This card has already being Used");
+					// }
+		 		}
+		 		// else{
+		 		// 	s.value = "Please, input a voucher!";
+		 		// }
+		 	}
+		 // 	if(!found){
+			// 	alert("Invalid Pin");
+			// }	
+		
+		// function load(){
+		// 	if(s.value == ""){
+		// 		s.value = "Please, input a voucher!";
+		// 	}
+		// 	vouch = JSON.parse(localStorage.getItem("savedVoucher"));
+		// 	for(y=0; y<vouch.length; y++){
+		// 		if(s.value == vouch[y][0]){
+		// 			alert("Loaded.");
+		// 			if(localStorage.getItem("bal")!=null){
+		// 				b2 += parseInt(localStorage.getItem("bal"));
+		// 				alert(ba);
+		// 				b2 +=500;
+		// 				alert(ba);
+		// 				localStorage.setItem("bal",b2);
+		// 			}
+		// 		}
+		// 	}	
+		// }
+	function balance(){
+		b = localStorage.getItem("bal");
+		s.value = "Your balance is " +b;
+	}
+	</script>	
+</body>
+</html>

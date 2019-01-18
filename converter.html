@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>converter</title>
+</head>
+<script>
+
+	
+function Convert ()
+     
+    { 
+     
+	  if (c.value == "Farenheit" && t.value == "Celsius") 
+	 	{
+	 		A.value = parseInt(i.value) * 273;
+	 	}
+	  if (c.value == "Farenheit" && t.value == "Kelvin")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Farenheit" && t.value == "Farenheit")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Celsius" && t.value == "Farenheit")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Celsius" && t.value == "Kelvin")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Celsius" && t.value == "Celsius")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Kelvin" && t.value == "Farenheit")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Kelvin" && t.value == "Celsius")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+	  if (c.value == "Kelvin" && t.value == "Kelvin")
+	    {
+	    	A.value = parseInt(i.value) * 100;
+	    }
+    }
+
+</script>
+<body>
+<table>
+<th>Temperature Converter</th>
+	<tr>
+	<td>
+	<select id="c">
+	<option>Farenheit</option>
+	<option>Kelvin</option>
+	<option>Celsius</option>
+	</select>
+	</td>
+	<td><input type="text" id="i"></td>
+	</tr>
+	<tr>
+	<td>TO</td>
+	</tr>
+	<tr>
+	<td>
+	<select id = "t">
+	<option>Farenheit</option>
+	<option>Kelvin</option>
+	<option>Celsius</option>
+	</select>
+	</td>
+	<td><input type="text" id="A"></td>
+	</tr>
+	<tr>
+    <td colspan="2"><button onclick="Convert()">CONVERT</button></td>
+	</tr>
+</table>
+</body>
+</html>
